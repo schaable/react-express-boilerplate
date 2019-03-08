@@ -1,0 +1,22 @@
+{
+  "name": "raid-tools",
+  "version": "1.0.0",
+  "dependencies": {
+    "concurrently": "^4.1.0"
+  },
+  "engines": {
+    "node": "10.x"
+  },
+  "license": "ISC",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently npm:dev-server npm:dev-client",
+    "dev-client": "npm start --prefix client",
+    "dev-server": "nodemon server/index.js",
+    "heroku-postbuild": "npm run build --prefix client",
+    "install-client": "npm install --prefix client",
+    "install-server": "npm install --prefix server",
+    "postinstall": "npm run install-client && npm run install-server",
+    "start": "npm start --prefix server"
+  }
+}

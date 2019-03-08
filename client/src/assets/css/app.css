@@ -1,0 +1,139 @@
+body {
+  background-color: #001420;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header styles */
+
+.site-header:before {
+  content: ' ';
+  display: table;
+}
+
+.site-header:after {
+  clear: both;
+  content: ' ';
+  display: table;
+}
+
+.site-header {
+  -webkit-box-flex: 0;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+}
+
+.site-logo , .site-header {
+  text-align: center;
+}
+
+.site-header {
+  line-height: 1;
+}
+
+.site-logo {
+  height: auto;
+  display: block;
+  padding: 2px;
+}
+
+.site-logo img {
+  display: block;
+  margin: 1em auto 0.5em;
+  max-width: 200px;
+}
+
+@media (min-width: 53.4375em) {
+  .site-logo img {
+    max-width: 250px;
+  }
+}
+
+.primary-menu-item {
+  display: inline-block;
+  padding: 1em 0.6em;
+  font-size: .9em;
+  color: #D9C562
+}
+
+.primary-menu-item:hover {
+  color: #B28A33;
+}
+
+@media (min-width: 33.125em) {
+  .primary-menu-item {
+    font-size: 1.4em;
+  }
+}
+
+@media (min-width: 51.875em) {
+  .site-logo img {
+    margin: 1em;
+  }
+
+  .primary-menu-item {
+    -webkit-flex-basis: 4em;
+    -ms-flex-preferred-size: 4em;
+    flex-basis: 4em;
+    margin: 0.25em;
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+
+  .primary-menu-item:nth-child(n + 5) {
+    -webkit-box-ordinal-group: 4;
+    -webkit-order: 3;
+    -ms-flex-order: 3;
+    order: 3;
+  }
+}
+
+@media (min-width: 51.875em) {
+  .site-header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .site-logo {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    width: 200px;
+    height: 200px;
+  }
+}
+
+a.navbar-brand {
+  color: #D9C562;
+}
+
+.home h1 {
+    background: -webkit-linear-gradient(#B28A33, #D9C562);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+/* footer styles */
+
+nav.navbar.fixed-bottom {
+  justify-content: center;
+}
